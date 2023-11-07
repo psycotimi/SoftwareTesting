@@ -1,2 +1,2 @@
 # SoftwareTesting
-comp.se.400 harjoitustyö
+comp.se.200 harjoitustyö
