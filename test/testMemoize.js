@@ -1,5 +1,5 @@
 import memo from '../src/memoize.js'
-import {assert} from 'chai'
+import {assert, expect} from 'chai'
 
 describe("Memoize", function() {
   it('should not call function if value already exists in known cache', function () {
@@ -40,7 +40,7 @@ describe("Memoize", function() {
       }
     }
 
-    let memoizedPow = memo(pow);
+    let memoizedPow = memo(pow, (x, n) => x + ';' + n);
     
     // Now we test that memoize will remember our functions outputs!
     let inputList = [[0,0], [0,1], [100,5], [123,2], [5,24], [2,10]];
@@ -56,4 +56,10 @@ describe("Memoize", function() {
       }
     }
   })
+
+  it('should throw if we pass in something else than a function', function () {
+    expect(() => memo('this is not a function')).to.throw("Expected a function");
+    expect(() => memo(() => 'this is a function', 'but this is not a resolver')).to.throw("Expected a function");
+  })
+  
 })

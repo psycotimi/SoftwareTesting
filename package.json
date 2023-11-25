@@ -5,11 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha"
+    "test": "c8 mocha",
+    "test-coveralls": "c8 --reporter=text-lcov mocha | ./node_modules/coveralls/bin/coveralls.js"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "c8": "*",
     "chai": "^4.3.10",
     "coveralls": "^3.1.1",
     "mocha": "^10.2.0",
