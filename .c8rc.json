@@ -1,5 +1,14 @@
 {
   "include": [
-    "src/*.js"  
+    "src/filter.js",
+    "src/memoize.js",
+    "src/toNumber.js",
+    "src/ceil.js",
+    "src/capitalize.js",
+    "src/camelCase.js",
+    "src/words.js",
+    "src/drop.js",
+    "src/at.js",
+    "src/every.js"
   ]
 }
