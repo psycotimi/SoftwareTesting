@@ -70,6 +70,6 @@ describe('toNumber function', () => {
 
   it('should return NaN for a non-numeric string', () => {
     const result = toNumber('abc');
-    expect(result).to.equal(NaN);
+    expect(result).to.be.NaN;
   });
 });

@@ -19,7 +19,7 @@ describe('camelCase function', () => {
 
   it('should handle mixed cases and convert to camel case', () => {
     const result = camelCase('Hello World from_OpenAI');
-    expect(result).to.equal('helloWorldFromOpenAI');
+    expect(result).to.equal('helloWorldFromOpenAi');
   });
 
   it('should handle empty string and return an empty string', () => {

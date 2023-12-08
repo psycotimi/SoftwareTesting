@@ -41,7 +41,7 @@ describe('filter function', () => {
   });
 
   it('should handle a predicate that filters strings with length greater than 3', () => {
-    const array = ['apple', 'banana', 'kiwi', 'grape'];
+    const array = ['apple', 'banana', 'nut', 'grape'];
     const result = filter(array, item => item.length > 3);
     expect(result).to.deep.equal(['apple', 'banana', 'grape']);
   });
